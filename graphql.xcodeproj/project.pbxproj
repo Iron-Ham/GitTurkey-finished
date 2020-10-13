@@ -21,6 +21,11 @@
 		DC8B44562535744500B83678 /* Token.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC8B44552535744500B83678 /* Token.swift */; };
 		DC8B44592535747700B83678 /* FollowerListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC8B44582535747700B83678 /* FollowerListItem.swift */; };
 		DC8B445D25357B2900B83678 /* Apollo in Frameworks */ = {isa = PBXBuildFile; productRef = DC8B445C25357B2900B83678 /* Apollo */; };
+		DC8B446225357F6900B83678 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC8B446125357F6900B83678 /* API.swift */; };
+		DC8B446625357FAA00B83678 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC8B446525357FAA00B83678 /* Network.swift */; };
+		DC8B446A2535805B00B83678 /* ClientError.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC8B44692535805B00B83678 /* ClientError.swift */; };
+		DC8B44702535835E00B83678 /* NetworkInterceptorProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC8B446F2535835E00B83678 /* NetworkInterceptorProvider.swift */; };
+		DC8B4478253584B700B83678 /* UserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC8B4477253584B700B83678 /* UserManager.swift */; };
 		DCAB8AFD25354B100063105E /* graphqlApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCAB8AFC25354B100063105E /* graphqlApp.swift */; };
 		DCAB8AFF25354B100063105E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCAB8AFE25354B100063105E /* ContentView.swift */; };
 		DCAB8B0125354B100063105E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DCAB8B0025354B100063105E /* Assets.xcassets */; };
@@ -43,6 +48,11 @@
 		DC8B44522535743000B83678 /* SnakeCaseJSONDecoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnakeCaseJSONDecoder.swift; sourceTree = "<group>"; };
 		DC8B44552535744500B83678 /* Token.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Token.swift; sourceTree = "<group>"; };
 		DC8B44582535747700B83678 /* FollowerListItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowerListItem.swift; sourceTree = "<group>"; };
+		DC8B446125357F6900B83678 /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
+		DC8B446525357FAA00B83678 /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
+		DC8B44692535805B00B83678 /* ClientError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientError.swift; sourceTree = "<group>"; };
+		DC8B446F2535835E00B83678 /* NetworkInterceptorProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkInterceptorProvider.swift; sourceTree = "<group>"; };
+		DC8B4477253584B700B83678 /* UserManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserManager.swift; sourceTree = "<group>"; };
 		DCAB8AF925354B100063105E /* graphql.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = graphql.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DCAB8AFC25354B100063105E /* graphqlApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = graphqlApp.swift; sourceTree = "<group>"; };
 		DCAB8AFE25354B100063105E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -94,6 +104,7 @@
 				DC8B4449253563EE00B83678 /* OAuthLoginSession.swift */,
 				DC8B444C2535640800B83678 /* LoginScopes.swift */,
 				DC8B44552535744500B83678 /* Token.swift */,
+				DC8B4477253584B700B83678 /* UserManager.swift */,
 			);
 			path = SignIn;
 			sourceTree = "<group>";
@@ -104,6 +115,16 @@
 				DC8B44582535747700B83678 /* FollowerListItem.swift */,
 			);
 			path = Followers;
+			sourceTree = "<group>";
+		};
+		DC8B446425357FA000B83678 /* Client */ = {
+			isa = PBXGroup;
+			children = (
+				DC8B446525357FAA00B83678 /* Network.swift */,
+				DC8B44692535805B00B83678 /* ClientError.swift */,
+				DC8B446F2535835E00B83678 /* NetworkInterceptorProvider.swift */,
+			);
+			path = Client;
 			sourceTree = "<group>";
 		};
 		DCAB8AF025354B100063105E = {
@@ -125,6 +146,8 @@
 		DCAB8AFB25354B100063105E /* graphql */ = {
 			isa = PBXGroup;
 			children = (
+				DC8B446425357FA000B83678 /* Client */,
+				DC8B446125357F6900B83678 /* API.swift */,
 				DC8B445025356A9600B83678 /* Followers */,
 				DC8B44322535551D00B83678 /* SignIn */,
 				DC8B441E25354EF500B83678 /* Views */,
@@ -266,6 +289,8 @@
 				DC8B442125354F0900B83678 /* AsyncImage.swift in Sources */,
 				DC8B4447253563C300B83678 /* URLBuilder.swift in Sources */,
 				DC8B444D2535640800B83678 /* LoginScopes.swift in Sources */,
+				DC8B446A2535805B00B83678 /* ClientError.swift in Sources */,
+				DC8B4478253584B700B83678 /* UserManager.swift in Sources */,
 				DC8B44382535558800B83678 /* SignInConstants.swift in Sources */,
 				DCAB8AFF25354B100063105E /* ContentView.swift in Sources */,
 				DC8B442525354F3300B83678 /* ImageLoader.swift in Sources */,
@@ -277,6 +302,9 @@
 				DCAB8B0F25354D700063105E /* ActionButtonStyle.swift in Sources */,
 				DC8B444A253563EE00B83678 /* OAuthLoginSession.swift in Sources */,
 				DC8B442825354F4000B83678 /* ImageCache.swift in Sources */,
+				DC8B44702535835E00B83678 /* NetworkInterceptorProvider.swift in Sources */,
+				DC8B446625357FAA00B83678 /* Network.swift in Sources */,
+				DC8B446225357F6900B83678 /* API.swift in Sources */,
 				DCAB8B1425354D970063105E /* grid.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -4,11 +4,11 @@
 import Apollo
 import Foundation
 
-public final class ViewerQueryQuery: GraphQLQuery {
+public final class ViewerLoginQuery: GraphQLQuery {
   /// The raw GraphQL definition of this operation.
   public let operationDefinition: String =
     """
-    query ViewerQuery {
+    query ViewerLogin {
       viewer {
         __typename
         login
@@ -16,9 +16,9 @@ public final class ViewerQueryQuery: GraphQLQuery {
     }
     """
 
-  public let operationName: String = "ViewerQuery"
+  public let operationName: String = "ViewerLogin"
 
-  public let operationIdentifier: String? = "fd6c1ac98e167a0336b2a6e3084807215b819930f98256d40f7f815ef17f1ceb"
+  public let operationIdentifier: String? = "a7d10e7f891958e44190926a6cd36cd76fa98bdd63c1ed7df6191f6a2199ed87"
 
   public init() {
   }

@@ -1,4 +1,4 @@
-query ViewerQuery {
+query ViewerLogin {
   viewer {
     login
   }

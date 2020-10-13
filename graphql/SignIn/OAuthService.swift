@@ -45,7 +45,7 @@ class OAuthService: NSObject, ObservableObject, ASWebAuthenticationPresentationC
                 callbackURLScheme: callbackScheme,
                 completionHandler: callback
             )
-            session.prefersEphemeralWebBrowserSession = true
+            //            session.prefersEphemeralWebBrowserSession = true
             session.presentationContextProvider = self
             self.session = session
             let didStart = session.start()
@@ -75,11 +75,13 @@ class OAuthService: NSObject, ObservableObject, ASWebAuthenticationPresentationC
                 return element.data
             }
             .decode(type: Token.self, decoder: SnakeCaseJSONDecoder())
-            .sink(receiveCompletion: { print ("Received completion: \($0).") },
-                  receiveValue: { token in
-                      self.authToken = token.accessToken
-                      self.isLoggedIn = true
-                  }
+            .sink(
+                receiveCompletion: { print ("Received completion: \($0).") },
+                receiveValue: { token in
+                    self.authToken = token.accessToken
+                    self.isLoggedIn = true
+                    UserManager.shared.token = token.accessToken
+                }
             )
     }
 
