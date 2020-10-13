@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct FollowerListItem: View {
-    @State var avatarUrl: String
+    @State var avatarUrl: URL?
     @State var login: String
     @State var name: String?
     public var body: some View {
@@ -16,7 +16,7 @@ struct FollowerListItem: View {
             HStack(alignment: .center) {
                 VStack {
                     AsyncImage(
-                        url: URL(string: avatarUrl)!,
+                        url: avatarUrl!,
                         placeholder: { ProgressView() },
                         image: { Image(uiImage: $0).resizable() }
                     )
@@ -47,7 +47,7 @@ struct FollowerListItem: View {
         .padding()
     }
 
-    public init(avatarUrl: String, login: String, name: String?) {
+    public init(avatarUrl: URL?, login: String, name: String?) {
         _avatarUrl = State(initialValue: avatarUrl)
         _login = State(initialValue: login)
         _name = State(initialValue: name)
@@ -57,7 +57,7 @@ struct FollowerListItem: View {
 struct FollowerListItem_Previews: PreviewProvider {
     static var previews: some View {
         FollowerListItem(
-            avatarUrl: "https://avatars1.githubusercontent.com/u/3388381?s=460&u=767aeeb299a41613663a3408c68cb10cafca079d&v=4",
+            avatarUrl: URL(string: "https://avatars1.githubusercontent.com/u/3388381?s=460&u=767aeeb299a41613663a3408c68cb10cafca079d&v=4"),
             login: "Iron-Ham",
             name: "Hesham Salman"
         )

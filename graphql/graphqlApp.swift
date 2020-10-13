@@ -5,18 +5,14 @@ struct graphqlApp: App {
     @ObservedObject var authService = OAuthService()
     var body: some Scene {
         WindowGroup {
-            if authService.authToken == nil {
-                ContentView().environmentObject(OAuthService())
-                    .onOpenURL { (url) in
-                        handleOpenUrl(
-                            notificationName: .gitHubCallback,
-                            callbackScheme: GITHUB_URL_SCHEME,
-                            url: url
-                        )
-                    }
-            } else {
-                Text("Hi")
-            }
+            ContentView().environmentObject(OAuthService())
+                .onOpenURL { (url) in
+                    handleOpenUrl(
+                        notificationName: .gitHubCallback,
+                        callbackScheme: GITHUB_URL_SCHEME,
+                        url: url
+                    )
+                }
         }
     }
 
@@ -40,7 +36,4 @@ struct graphqlApp: App {
         let notification = Notification(name: notificationName,object: url, userInfo: nil)
         NotificationCenter.default.post(notification)
     }
-
-
-
 }
