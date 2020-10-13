@@ -1,6 +1,9 @@
 import SwiftUI
 
+
 struct ContentView: View {
+    @EnvironmentObject var oauth: OAuthService
+
     var body: some View {
         VStack(spacing: grid(2)) {
             AsyncImage(
@@ -13,7 +16,7 @@ struct ContentView: View {
             .shadow(radius: 8)
             .padding()
 
-            Text("GitBird")
+            Text("GitTurkey 🦃")
                 .font(.largeTitle)
                 .fontWeight(.ultraLight)
                 .foregroundColor(.primary)
@@ -23,9 +26,12 @@ struct ContentView: View {
                 .foregroundColor(.primary)
                 .fontWeight(.ultraLight)
 
-            Button("Log in", action: { })
+            Button("Sign in", action: { self.oauth.onSignInButton() })
                 .buttonStyle(ActionButtonStyle())
                 .padding()
+        }
+        .fullScreenCover(isPresented: self.$oauth.isLoggedIn) {
+            Text("Hi")
         }
     }
 }
