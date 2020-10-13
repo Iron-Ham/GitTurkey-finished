@@ -31,7 +31,7 @@ struct ContentView: View {
                 .padding()
         }
         .fullScreenCover(isPresented: self.$oauth.isLoggedIn) {
-            Text("Hi")
+            FollowersView()
         }
     }
 }

@@ -3,4 +3,54 @@
    uuid = "1EA41228-3EB2-4157-BB6A-CC8BF42E2FBE"
    type = "1"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "CB64FB54-535F-483E-8CB7-2DEFAF46A9EB"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "graphql/Followers/FollowerService.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "10"
+            endingLineNumber = "10"
+            landmarkName = "fetchFollowers()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "CB64FB54-535F-483E-8CB7-2DEFAF46A9EB - 7dad3dba5c41bc63"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (graphql.FollowersQuery.Data) -&gt; Swift.Optional&lt;Swift.Array&lt;graphql.Follower&gt;&gt; in graphql.FollowerService.fetchFollowers() -&gt; ()"
+                  moduleName = "graphql"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/heshamsalman/Developer/Experiments/graphql-finished/graphql/Followers/FollowerService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "10"
+                  endingLineNumber = "10"
+                  offsetFromSymbolStart = "40">
+               </Location>
+               <Location
+                  uuid = "CB64FB54-535F-483E-8CB7-2DEFAF46A9EB - 4caa4ed098f91ac7"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Array&lt;Swift.Optional&lt;graphql.FollowersQuery.Data.Viewer.Follower.Node&gt;&gt;) -&gt; Swift.Optional&lt;Swift.Array&lt;graphql.Follower&gt;&gt; in closure #1 (graphql.FollowersQuery.Data) -&gt; Swift.Optional&lt;Swift.Array&lt;graphql.Follower&gt;&gt; in graphql.FollowerService.fetchFollowers() -&gt; ()"
+                  moduleName = "graphql"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/heshamsalman/Developer/Experiments/graphql-finished/graphql/Followers/FollowerService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "11"
+                  endingLineNumber = "11"
+                  offsetFromSymbolStart = "32">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>

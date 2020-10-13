@@ -1,0 +1,11 @@
+query Followers {
+  viewer {
+    followers(first: 100) {
+      nodes {
+        avatarUrl
+        login
+        name
+      }
+    }
+  }
+}

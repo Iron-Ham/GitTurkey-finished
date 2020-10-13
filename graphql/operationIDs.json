@@ -1,4 +1,8 @@
 {
+  "4212cc762b6195379d512c083b1026043bb86c658681e8c751d61746cb82a6ac": {
+    "name": "Followers",
+    "source": "query Followers {\n  viewer {\n    __typename\n    followers(first: 100) {\n      __typename\n      nodes {\n        __typename\n        avatarUrl\n        login\n        name\n      }\n    }\n  }\n}"
+  },
   "a7d10e7f891958e44190926a6cd36cd76fa98bdd63c1ed7df6191f6a2199ed87": {
     "name": "ViewerLogin",
     "source": "query ViewerLogin {\n  viewer {\n    __typename\n    login\n  }\n}"

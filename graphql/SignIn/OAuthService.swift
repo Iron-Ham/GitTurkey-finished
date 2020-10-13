@@ -45,7 +45,7 @@ class OAuthService: NSObject, ObservableObject, ASWebAuthenticationPresentationC
                 callbackURLScheme: callbackScheme,
                 completionHandler: callback
             )
-            //            session.prefersEphemeralWebBrowserSession = true
+            session.prefersEphemeralWebBrowserSession = true
             session.presentationContextProvider = self
             self.session = session
             let didStart = session.start()
